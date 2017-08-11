@@ -7,11 +7,13 @@ echo "=================================="
 echo "Running tests for C implementation"
 echo "=================================="
 
-gcc ../c/lru.c
+cd ../c/
+
+gcc qnode.c queue.c hash.c lru.c
 if [ $? -eq 0 ]; then
     echo "${green}Compilation OK${reset}"
-    ../c/a.out < ../c/in > ../c/out
-    python checker.py ../c/out ../c/result
+    ./a.out # > out
+    python ../scripts/checker.py out result
 else
     echo "${red}Compilation FAIL${reset}"
     exit 1
