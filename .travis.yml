@@ -6,9 +6,12 @@ language:
 python:
   - "2.7"
 
+before_install:
+  - chmod +x scripts/test_*.sh
+
 script:
-  - cd cpp
-  - ./test.sh
+  - cd scripts
+  - ./test_all.sh
 
 notifications:
   email: false

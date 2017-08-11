@@ -13,9 +13,11 @@ if __name__ == '__main__':
 	content1 = get_contents(file1)
 	content2 = get_contents(file2)
 
+	if len(content1) == 0:
+		sys.exit('Incorrect')
+
 	for i in range(len(content1)):
 		if(content1[i] != content2[i]):
 			sys.exit(str(content1[i]) + ' != ' + str(content2[i]) + \
 				'\n' + 'Answer doesn\'t match' )
 	print 'Correct answer'
-
