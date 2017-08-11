@@ -1,2 +1,2 @@
 # lru
-LRU cache implementation
+LRU cache implementations in C, C++
